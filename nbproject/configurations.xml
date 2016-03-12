@@ -4,7 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>util.h</itemPath>
+      <itemPath>util/collection/heap.h</itemPath>
+      <itemPath>util/string/util.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,8 +14,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>util/collection/heap.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>util.c</itemPath>
+      <itemPath>util/string/util.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -40,9 +42,13 @@
       </compileType>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="util.c" ex="false" tool="0" flavor2="0">
+      <item path="util/collection/heap.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="util.h" ex="false" tool="3" flavor2="0">
+      <item path="util/collection/heap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util/string/util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="util/string/util.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -67,9 +73,13 @@
       </compileType>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="util.c" ex="false" tool="0" flavor2="0">
+      <item path="util/collection/heap.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="util.h" ex="false" tool="3" flavor2="0">
+      <item path="util/collection/heap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util/string/util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="util/string/util.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

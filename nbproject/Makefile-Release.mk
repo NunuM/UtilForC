@@ -36,7 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/util.o
+	${OBJECTDIR}/util/collection/heap.o \
+	${OBJECTDIR}/util/string/util.o
 
 
 # C Compiler Flags
@@ -68,10 +69,15 @@ ${OBJECTDIR}/main.o: main.c
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
-${OBJECTDIR}/util.o: util.c 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/util/collection/heap.o: util/collection/heap.c 
+	${MKDIR} -p ${OBJECTDIR}/util/collection
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/util.o util.c
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/util/collection/heap.o util/collection/heap.c
+
+${OBJECTDIR}/util/string/util.o: util/string/util.c 
+	${MKDIR} -p ${OBJECTDIR}/util/string
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/util/string/util.o util/string/util.c
 
 # Subprojects
 .build-subprojects:

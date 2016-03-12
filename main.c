@@ -13,25 +13,17 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "util.h"
+#include "util/collection/heap.h"
 
 /*
  * 
  */
+
 int main(int argc, char** argv) {
     puts("Usage of strsplit");
 
-    tosplit* array = strsplit("Software undergoes beta testing shortly before it’s released. Beta is Latin for “still doesn’t work", ' ');
+   
 
-    int e;
-    for (e = 0; e < array->size; e++) {
-        printf("%s\n", *(array->arguments + e));
-        
-
-    }
-
-    freeStrSlipt(array);
-    
     return (EXIT_SUCCESS);
 }
 
