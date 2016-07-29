@@ -9,3 +9,4 @@ This repository is destiny for utilities to C language.
 
 1. String split.
 2. Heap priority queue.
+3. Linked List.
