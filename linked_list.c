@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include "linked_list.h"
 
 /**
@@ -13,43 +14,57 @@
  * 
  * @return pointer to empty linked list
  */
-struct linked * initializeLinkedList(){
-    
+struct linked * initializeLinkedList() {
+
     struct linked* list = (struct linked*) malloc(sizeof (struct linked));
-    
-    if(list == NULL)
+
+    if (list == NULL)
         return NULL;
-    
+
     list->head = NULL;
-    
+
     return list;
 }
-
 
 /**
  * Insert at end of list new allocated node, with given value.
  * 
  * @param list pointer
- * @param value to insert
+ * @param argsNum to insert
+ * @param ... 
  * @return boolean of action
  */
-int addNode(struct linked * list, int value) {
+int addNode(struct linked * list, int argsNum, ...) {
 
+    int i;
+    va_list valist;
+    va_start(valist, argsNum);
+    
     struct node ** next = &(list->head);
-    struct node * newNode = (struct node *) malloc(sizeof (struct node));
 
-    if (newNode == NULL)
-        return EXIT_FAILURE;
 
-    newNode->value = value;
-    newNode->next = NULL;
+    for (i = 0; i < argsNum; i++) {
+        
+        struct node * newNode = (struct node *) malloc(sizeof (struct node));
 
-    while (*next != NULL)
-        next = &(*next)->next;
+        if (newNode == NULL)
+            return EXIT_FAILURE;
 
-    * next = newNode;
+        newNode->value = va_arg(valist, int);
+        newNode->next = NULL;
 
-    list->size++;
+        while (*next != NULL)
+            next = &(*next)->next;
+
+        * next = newNode;
+
+        list->size++;
+
+    }
+
+    /* clean memory reserved for valist */
+    va_end(valist);
+
 
     return EXIT_SUCCESS;
 }
@@ -62,7 +77,7 @@ int addNode(struct linked * list, int value) {
  */
 int clearNodes(struct linked * list) {
 
-    
+
     struct node * currentNode = list->head;
     struct node * aux = NULL;
 

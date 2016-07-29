@@ -22,7 +22,11 @@
 
 int main(int argc, char** argv) {
     
+    struct linked* list = initializeLinkedList();
     
+    addNode(list,2,8,77);
+    
+    printLinkedList(list);
 
     return (EXIT_SUCCESS);
 }

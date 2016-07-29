@@ -31,7 +31,7 @@ struct linked {
     struct node * head;
 };
 
-int addNode(struct linked *list, int value);
+int addNode(struct linked *list, int argsNum, ...);
 int removeNode(struct linked * list, struct node *toRemove);
 int clearNodes(struct linked * list);
 int removeLinkedList(struct linked * list);
