@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>util/collection/heap.h</itemPath>
+      <itemPath>linked_list.h</itemPath>
       <itemPath>util/string/util.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -15,6 +16,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>util/collection/heap.c</itemPath>
+      <itemPath>linked_list.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>util/string/util.c</itemPath>
     </logicalFolder>
@@ -40,6 +42,10 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="linked_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="linked_list.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="util/collection/heap.c" ex="false" tool="0" flavor2="0">
@@ -71,6 +77,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="linked_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="linked_list.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="util/collection/heap.c" ex="false" tool="0" flavor2="0">

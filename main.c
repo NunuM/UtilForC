@@ -13,16 +13,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "util/collection/heap.h"
+#include <syslog.h>
+#include "linked_list.h"
 
 /*
  * 
  */
 
 int main(int argc, char** argv) {
-    puts("Usage of strsplit");
-
-   
+    
+    
 
     return (EXIT_SUCCESS);
 }
